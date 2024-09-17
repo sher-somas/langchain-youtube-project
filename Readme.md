@@ -20,5 +20,20 @@ To run this project, you need to have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
+git clone https://github.com/sher-somas/langchain-youtube-project.git
+cd langchain-youtube-project
+pip install -r requirements.txt
+export OPENAI_API_KEY="your-openai-api-key"
+streamlit run app.py
+```
+
+### 2. Running the Application with Docker
+```bash
+docker build -t streamlit-langchain-app .
+docker run -p 8501:8501 -e OPENAI_API_KEY="your-openai-api-key" streamlit-langchain-app
+```
+
+### 3. Application GUI
+
+![](application-interface.png)
+
